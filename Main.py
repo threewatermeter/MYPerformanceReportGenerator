@@ -60,7 +60,7 @@ Data2 = pd.concat([Data2, DataMDRT])
 
 # ----------计算每月业绩----------
 Data1Shape = list(Data1.shape)
-Data1RowNum = Data1Shape[0]  # Data1行数
+Data1RowNum = Data1Shape[0]  
 
 #收单及回执截止日
 Month1912EndReceiptDate = datetime.datetime(2020, 2, 14)
@@ -227,7 +227,7 @@ Data1Pivot = pd.pivot_table(Data1, values=['2020-01月业绩', '2020-02月业绩
 
 # 计算MDRT折算保费,FYC
 Data2Shape = list(Data2.shape)
-Data2RowNum = Data2Shape[0]  # Data1行数
+Data2RowNum = Data2Shape[0]
 
 #筛选2020业绩
 PerfNum = 0
@@ -256,11 +256,72 @@ while PerfNum < Data2RowNum:
 #MDRT数据汇总
 Data2Pivot = pd.pivot_table(Data2, values=['折算保费', '2020FYC'], index=' 服务人员 ', aggfunc='sum')
 Data2Pivot = Data2Pivot.sort_values(by=["折算保费"], ascending=False)
+Data2MDRT = pd.DataFrame(columns=['2020-MDRT-FYC差值', '2020-MDRT-保费差值','2020-COT-FYC差值', '2020-COT-保费差值','2020-TOT-FYC差值', '2020-TOT-保费差值'])
+Data2Pivot = pd.concat([Data2Pivot,Data2MDRT])
+
+Data2PivotShape = list(Data2Pivot.shape)
+Data2PivotRowNum = Data2PivotShape[0]
+
+#MDRT标准
+MDRTCommission = 171300
+MDRTPremium = 513900
+COTCommission = 3 * MDRTCommission
+COTPremium = 3 * MDRTPremium
+TOTCommission = 6 * MDRTCommission
+TOTPremium = 6 * MDRTPremium
+
+PerfNum = 0
+while PerfNum < Data2PivotRowNum:
+    if Data2Pivot.iloc[PerfNum,0] >= MDRTCommission:
+        Data2Pivot.iat[PerfNum,2] = '预达成'
+    else:
+        Data2Pivot.iat[PerfNum,2] = MDRTCommission - Data2Pivot.iloc[PerfNum,0]
+    PerfNum = PerfNum + 1
+
+PerfNum = 0
+while PerfNum < Data2PivotRowNum:
+    if Data2Pivot.iloc[PerfNum,1] >= MDRTPremium:
+        Data2Pivot.iat[PerfNum,3] = '预达成'
+    else:
+        Data2Pivot.iat[PerfNum,3] = MDRTPremium - Data2Pivot.iloc[PerfNum,1]
+    PerfNum = PerfNum + 1
+
+PerfNum = 0
+while PerfNum < Data2PivotRowNum:
+    if Data2Pivot.iloc[PerfNum,0] >= COTCommission:
+        Data2Pivot.iat[PerfNum,4] = '预达成'
+    else:
+        Data2Pivot.iat[PerfNum,4] = COTCommission - Data2Pivot.iloc[PerfNum,0]
+    PerfNum = PerfNum + 1
+
+PerfNum = 0
+while PerfNum < Data2PivotRowNum:
+    if Data2Pivot.iloc[PerfNum,1] >= COTPremium:
+        Data2Pivot.iat[PerfNum,5] = '预达成'
+    else:
+        Data2Pivot.iat[PerfNum,5] = COTPremium - Data2Pivot.iloc[PerfNum,1]
+    PerfNum = PerfNum + 1
+
+PerfNum = 0
+while PerfNum < Data2PivotRowNum:
+    if Data2Pivot.iloc[PerfNum,0] >= TOTCommission:
+        Data2Pivot.iat[PerfNum,6] = '预达成'
+    else:
+        Data2Pivot.iat[PerfNum,6] = TOTCommission - Data2Pivot.iloc[PerfNum,0]
+    PerfNum = PerfNum + 1
+
+PerfNum = 0
+while PerfNum < Data2PivotRowNum:
+    if Data2Pivot.iloc[PerfNum,1] >= TOTPremium:
+        Data2Pivot.iat[PerfNum,7] = '预达成'
+    else:
+        Data2Pivot.iat[PerfNum,7] = TOTPremium - Data2Pivot.iloc[PerfNum,1]
+    PerfNum = PerfNum + 1
 
 #----------数据写入xlsx----------
 writer = pd.ExcelWriter('result.xlsx')
-Data1.to_excel(writer, sheet_name='正式保单', index=False)
-Data1Pivot.to_excel(writer, sheet_name='月度业绩汇总表')
-Data2.to_excel(writer, sheet_name='正式保单+等待回执+投保单', index=False)
-Data2Pivot.to_excel(writer, sheet_name='MDRT')
+Data1.to_excel(writer, sheet_name = '正式保单', index = False)
+Data1Pivot.to_excel(writer, sheet_name = '月度业绩汇总表')
+Data2.to_excel(writer, sheet_name = '正式保单+等待回执+投保单', index = False)
+Data2Pivot.to_excel(writer, sheet_name = 'MDRT')
 writer.save()
