@@ -63,6 +63,7 @@ Data1Shape = list(Data1.shape)
 Data1RowNum = Data1Shape[0]  
 
 #收单及回执截止日
+#2020
 Month1912EndReceiptDate = datetime.datetime(2020, 2, 14)
 
 Month2001StartOrderDate = datetime.datetime(2020, 1, 23)
@@ -112,6 +113,56 @@ Month2011EndReceiptDate = datetime.datetime(2021, 1, 11)
 Month2012StartOrderDate = datetime.datetime(2020, 12, 26)
 Month2012EndOrderDate = datetime.datetime(2021, 1, 25)
 Month2012EndReceiptDate = datetime.datetime(2021, 2, 9)
+
+#2021
+Month2101StartOrderDate = datetime.datetime(2021, 1, 26)
+Month2101EndOrderDate = datetime.datetime(2021, 2, 25)
+Month2101EndReceiptDate = datetime.datetime(2021, 3, 10)
+
+Month2102StartOrderDate = datetime.datetime(2021, 2, 26)
+Month2102EndOrderDate = datetime.datetime(2021, 3, 25)
+Month2102EndReceiptDate = datetime.datetime(2021, 4, 12)
+
+Month2103StartOrderDate = datetime.datetime(2021, 3, 26)
+Month2103EndOrderDate = datetime.datetime(2021, 4, 26)
+Month2103EndReceiptDate = datetime.datetime(2021, 5, 13)
+
+Month2104StartOrderDate = datetime.datetime(2021, 4, 27)
+Month2104EndOrderDate = datetime.datetime(2021, 5, 25)
+Month2104EndReceiptDate = datetime.datetime(2021, 6, 10)
+
+Month2105StartOrderDate = datetime.datetime(2021, 5, 26)
+Month2105EndOrderDate = datetime.datetime(2021, 6, 25)
+Month2105EndReceiptDate = datetime.datetime(2021, 7, 12)
+
+Month2106StartOrderDate = datetime.datetime(2021, 6, 26)
+Month2106EndOrderDate = datetime.datetime(2021, 7, 26)
+Month2106EndReceiptDate = datetime.datetime(2021, 8, 10)
+
+Month2107StartOrderDate = datetime.datetime(2021, 7, 27)
+Month2107EndOrderDate = datetime.datetime(2021, 8, 25)
+Month2107EndReceiptDate = datetime.datetime(2021, 9, 10)
+
+Month2108StartOrderDate = datetime.datetime(2021, 8, 26)
+Month2108EndOrderDate = datetime.datetime(2021, 9, 26)
+Month2108EndReceiptDate = datetime.datetime(2021, 10, 13)
+
+Month2109StartOrderDate = datetime.datetime(2021, 9, 27)
+Month2109EndOrderDate = datetime.datetime(2021, 10, 25)
+Month2109EndReceiptDate = datetime.datetime(2021, 11, 10)
+
+Month2110StartOrderDate = datetime.datetime(2021, 10, 26)
+Month2110EndOrderDate = datetime.datetime(2021, 11, 25)
+Month2110EndReceiptDate = datetime.datetime(2021, 12, 10)
+
+Month2111StartOrderDate = datetime.datetime(2021, 11, 26)
+Month2111EndOrderDate = datetime.datetime(2021, 12, 27)
+Month2111EndReceiptDate = datetime.datetime(2021, 1, 11)
+
+Month2112StartOrderDate = datetime.datetime(2021, 12, 28)
+Month2112EndOrderDate = datetime.datetime(2022, 1, 25)
+Month2112EndReceiptDate = datetime.datetime(2022, 2, 14)
+
 
 # 1月
 PerfNum = 0
@@ -263,59 +314,68 @@ Data2PivotShape = list(Data2Pivot.shape)
 Data2PivotRowNum = Data2PivotShape[0]
 
 #MDRT标准
-MDRTCommission = 171300
-MDRTPremium = 513900
-COTCommission = 3 * MDRTCommission
-COTPremium = 3 * MDRTPremium
-TOTCommission = 6 * MDRTCommission
-TOTPremium = 6 * MDRTPremium
+
+MDRTCommission20 = 171300
+MDRTPremium20 = 513900
+COTCommission20 = 3 * MDRTCommission20
+COTPremium20 = 3 * MDRTPremium20
+TOTCommission20 = 6 * MDRTCommission20
+TOTPremium20 = 6 * MDRTPremium20
+
+MDRTCommission20 = 183100
+MDRTPremium20 = 549300
+COTCommission20 = 3 * MDRTCommission20
+COTPremium20 = 3 * MDRTPremium20
+TOTCommission20 = 6 * MDRTCommission20
+TOTPremium20 = 6 * MDRTPremium20
+
 
 PerfNum = 0
 while PerfNum < Data2PivotRowNum:
-    if Data2Pivot.iloc[PerfNum,0] >= MDRTCommission:
+    if Data2Pivot.iloc[PerfNum,0] >= MDRTCommission20:
         Data2Pivot.iat[PerfNum,2] = '预达成'
     else:
-        Data2Pivot.iat[PerfNum,2] = MDRTCommission - Data2Pivot.iloc[PerfNum,0]
+        Data2Pivot.iat[PerfNum,2] = MDRTCommission20 - Data2Pivot.iloc[PerfNum,0]
     PerfNum = PerfNum + 1
 
 PerfNum = 0
 while PerfNum < Data2PivotRowNum:
-    if Data2Pivot.iloc[PerfNum,1] >= MDRTPremium:
+    if Data2Pivot.iloc[PerfNum,1] >= MDRTPremium20:
         Data2Pivot.iat[PerfNum,3] = '预达成'
     else:
-        Data2Pivot.iat[PerfNum,3] = MDRTPremium - Data2Pivot.iloc[PerfNum,1]
+        Data2Pivot.iat[PerfNum,3] = MDRTPremium20 - Data2Pivot.iloc[PerfNum,1]
     PerfNum = PerfNum + 1
 
 PerfNum = 0
 while PerfNum < Data2PivotRowNum:
-    if Data2Pivot.iloc[PerfNum,0] >= COTCommission:
+    if Data2Pivot.iloc[PerfNum,0] >= COTCommission20:
         Data2Pivot.iat[PerfNum,4] = '预达成'
     else:
-        Data2Pivot.iat[PerfNum,4] = COTCommission - Data2Pivot.iloc[PerfNum,0]
+        Data2Pivot.iat[PerfNum,4] = COTCommission20 - Data2Pivot.iloc[PerfNum,0]
     PerfNum = PerfNum + 1
 
 PerfNum = 0
 while PerfNum < Data2PivotRowNum:
-    if Data2Pivot.iloc[PerfNum,1] >= COTPremium:
+    if Data2Pivot.iloc[PerfNum,1] >= COTPremium20:
         Data2Pivot.iat[PerfNum,5] = '预达成'
     else:
-        Data2Pivot.iat[PerfNum,5] = COTPremium - Data2Pivot.iloc[PerfNum,1]
+        Data2Pivot.iat[PerfNum,5] = COTPremium20 - Data2Pivot.iloc[PerfNum,1]
     PerfNum = PerfNum + 1
 
 PerfNum = 0
 while PerfNum < Data2PivotRowNum:
-    if Data2Pivot.iloc[PerfNum,0] >= TOTCommission:
+    if Data2Pivot.iloc[PerfNum,0] >= TOTCommission20:
         Data2Pivot.iat[PerfNum,6] = '预达成'
     else:
-        Data2Pivot.iat[PerfNum,6] = TOTCommission - Data2Pivot.iloc[PerfNum,0]
+        Data2Pivot.iat[PerfNum,6] = TOTCommission20 - Data2Pivot.iloc[PerfNum,0]
     PerfNum = PerfNum + 1
 
 PerfNum = 0
 while PerfNum < Data2PivotRowNum:
-    if Data2Pivot.iloc[PerfNum,1] >= TOTPremium:
+    if Data2Pivot.iloc[PerfNum,1] >= TOTPremium20:
         Data2Pivot.iat[PerfNum,7] = '预达成'
     else:
-        Data2Pivot.iat[PerfNum,7] = TOTPremium - Data2Pivot.iloc[PerfNum,1]
+        Data2Pivot.iat[PerfNum,7] = TOTPremium20 - Data2Pivot.iloc[PerfNum,1]
     PerfNum = PerfNum + 1
 
 #----------数据写入xlsx----------
