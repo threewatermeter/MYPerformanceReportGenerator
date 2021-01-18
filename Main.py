@@ -167,109 +167,109 @@ Month2112EndReceiptDate = datetime.datetime(2022, 2, 14)
 # 1月
 PerfNum = 0
 while PerfNum < Data1RowNum:
-    if ((Month2001StartOrderDate <= Data1.iloc[PerfNum, 25]) and (Data1.iloc[PerfNum, 25] <= Month2001EndOrderDate) and (Data1.iloc[PerfNum, 28] <= Month2001EndReceiptDate)) or ((Data1.iloc[PerfNum, 25] < Month2001StartOrderDate) and (Month1912EndReceiptDate < Data1.iloc[PerfNum, 28]) and (Data1.iloc[PerfNum, 28] <= Month2001EndReceiptDate)):
-        Data1.iat[PerfNum, 42] = Data1.iloc[PerfNum, 7]
+    if ((Month2001StartOrderDate <= Data1.iloc[PerfNum,26]) and (Data1.iloc[PerfNum,26] <= Month2001EndOrderDate) and (Data1.iloc[PerfNum,29] <= Month2001EndReceiptDate)) or ((Data1.iloc[PerfNum,26] < Month2001StartOrderDate) and (Month1912EndReceiptDate < Data1.iloc[PerfNum,29]) and (Data1.iloc[PerfNum,29] <= Month2001EndReceiptDate)):
+        Data1.iat[PerfNum,43] = Data1.iloc[PerfNum,7]
     else:
-        Data1.iat[PerfNum, 42] = 0
+        Data1.iat[PerfNum,43] = 0
     PerfNum = PerfNum + 1
 
 # 2月
 PerfNum = 0
 while PerfNum < Data1RowNum:
-    if ((Month2002StartOrderDate <= Data1.iloc[PerfNum, 25]) and (Data1.iloc[PerfNum, 25] <= Month2002EndOrderDate) and (Data1.iloc[PerfNum, 28] <= Month2002EndReceiptDate)) or ((Data1.iloc[PerfNum, 25] < Month2002StartOrderDate) and (Month2001EndReceiptDate < Data1.iloc[PerfNum, 28]) and (Data1.iloc[PerfNum, 28] <= Month2002EndReceiptDate)):
-        Data1.iat[PerfNum, 43] = Data1.iloc[PerfNum, 7]
+    if ((Month2002StartOrderDate <= Data1.iloc[PerfNum,26]) and (Data1.iloc[PerfNum,26] <= Month2002EndOrderDate) and (Data1.iloc[PerfNum,29] <= Month2002EndReceiptDate)) or ((Data1.iloc[PerfNum,26] < Month2002StartOrderDate) and (Month2001EndReceiptDate < Data1.iloc[PerfNum,29]) and (Data1.iloc[PerfNum,29] <= Month2002EndReceiptDate)):
+        Data1.iat[PerfNum,44] = Data1.iloc[PerfNum,7]
     else:
-        Data1.iat[PerfNum, 43] = 0
+        Data1.iat[PerfNum,44] = 0
     PerfNum = PerfNum + 1
 
 # 3月
 PerfNum = 0
 while PerfNum < Data1RowNum:
-    if ((Month2003StartOrderDate <= Data1.iloc[PerfNum, 25]) and (Data1.iloc[PerfNum, 25] <= Month2003EndOrderDate) and (Data1.iloc[PerfNum, 28] <= Month2003EndReceiptDate)) or ((Data1.iloc[PerfNum, 25] < Month2003StartOrderDate) and (Month2002EndReceiptDate < Data1.iloc[PerfNum, 28]) and (Data1.iloc[PerfNum, 28] <= Month2003EndReceiptDate)):
-        Data1.iat[PerfNum, 44] = Data1.iloc[PerfNum, 7]
+    if ((Month2003StartOrderDate <= Data1.iloc[PerfNum,26]) and (Data1.iloc[PerfNum,26] <= Month2003EndOrderDate) and (Data1.iloc[PerfNum,29] <= Month2003EndReceiptDate)) or ((Data1.iloc[PerfNum,26] < Month2003StartOrderDate) and (Month2002EndReceiptDate < Data1.iloc[PerfNum,29]) and (Data1.iloc[PerfNum,29] <= Month2003EndReceiptDate)):
+        Data1.iat[PerfNum,45] = Data1.iloc[PerfNum,7]
     else:
-        Data1.iat[PerfNum, 44] = 0
+        Data1.iat[PerfNum,45] = 0
     PerfNum = PerfNum + 1
 
 # 4月
 PerfNum = 0
 while PerfNum < Data1RowNum:
-    if ((Month2004StartOrderDate <= Data1.iloc[PerfNum, 25]) and (Data1.iloc[PerfNum, 25] <= Month2004EndOrderDate) and (Data1.iloc[PerfNum, 28] <= Month2004EndReceiptDate)) or ((Data1.iloc[PerfNum, 25] < Month2004StartOrderDate) and (Month2003EndReceiptDate < Data1.iloc[PerfNum, 28]) and (Data1.iloc[PerfNum, 28] <= Month2004EndReceiptDate)):
-        Data1.iat[PerfNum, 45] = Data1.iloc[PerfNum, 7]
+    if ((Month2004StartOrderDate <= Data1.iloc[PerfNum,26]) and (Data1.iloc[PerfNum,26] <= Month2004EndOrderDate) and (Data1.iloc[PerfNum,29] <= Month2004EndReceiptDate)) or ((Data1.iloc[PerfNum,26] < Month2004StartOrderDate) and (Month2003EndReceiptDate < Data1.iloc[PerfNum,29]) and (Data1.iloc[PerfNum,29] <= Month2004EndReceiptDate)):
+        Data1.iat[PerfNum,46] = Data1.iloc[PerfNum,7]
     else:
-        Data1.iat[PerfNum, 45] = 0
+        Data1.iat[PerfNum,46] = 0
     PerfNum = PerfNum + 1
 
 # 5月
 PerfNum = 0
 while PerfNum < Data1RowNum:
-    if ((Month2005StartOrderDate <= Data1.iloc[PerfNum, 25]) and (Data1.iloc[PerfNum, 25] <= Month2005EndOrderDate) and (Data1.iloc[PerfNum, 28] <= Month2005EndReceiptDate)) or ((Data1.iloc[PerfNum, 25] < Month2005StartOrderDate) and (Month2004EndReceiptDate < Data1.iloc[PerfNum, 28]) and (Data1.iloc[PerfNum, 28] <= Month2005EndReceiptDate)):
-        Data1.iat[PerfNum, 46] = Data1.iloc[PerfNum, 7]
+    if ((Month2005StartOrderDate <= Data1.iloc[PerfNum,26]) and (Data1.iloc[PerfNum,26] <= Month2005EndOrderDate) and (Data1.iloc[PerfNum,29] <= Month2005EndReceiptDate)) or ((Data1.iloc[PerfNum,26] < Month2005StartOrderDate) and (Month2004EndReceiptDate < Data1.iloc[PerfNum,29]) and (Data1.iloc[PerfNum,29] <= Month2005EndReceiptDate)):
+        Data1.iat[PerfNum,47] = Data1.iloc[PerfNum,7]
     else:
-        Data1.iat[PerfNum, 46] = 0
+        Data1.iat[PerfNum,47] = 0
     PerfNum = PerfNum + 1
 
 # 6月
 PerfNum = 0
 while PerfNum < Data1RowNum:
-    if ((Month2006StartOrderDate <= Data1.iloc[PerfNum, 25]) and (Data1.iloc[PerfNum, 25] <= Month2006EndOrderDate) and (Data1.iloc[PerfNum, 28] <= Month2006EndReceiptDate)) or ((Data1.iloc[PerfNum, 25] < Month2006StartOrderDate) and (Month2005EndReceiptDate < Data1.iloc[PerfNum, 28]) and (Data1.iloc[PerfNum, 28] <= Month2006EndReceiptDate)):
-        Data1.iat[PerfNum, 47] = Data1.iloc[PerfNum, 7]
+    if ((Month2006StartOrderDate <= Data1.iloc[PerfNum,26]) and (Data1.iloc[PerfNum,26] <= Month2006EndOrderDate) and (Data1.iloc[PerfNum,29] <= Month2006EndReceiptDate)) or ((Data1.iloc[PerfNum,26] < Month2006StartOrderDate) and (Month2005EndReceiptDate < Data1.iloc[PerfNum,29]) and (Data1.iloc[PerfNum,29] <= Month2006EndReceiptDate)):
+        Data1.iat[PerfNum,48] = Data1.iloc[PerfNum,7]
     else:
-        Data1.iat[PerfNum, 47] = 0
+        Data1.iat[PerfNum,48] = 0
     PerfNum = PerfNum + 1
 
 # 7月
 PerfNum = 0
 while PerfNum < Data1RowNum:
-    if ((Month2007StartOrderDate <= Data1.iloc[PerfNum, 25]) and (Data1.iloc[PerfNum, 25] <= Month2007EndOrderDate) and (Data1.iloc[PerfNum, 28] <= Month2007EndReceiptDate)) or ((Data1.iloc[PerfNum, 25] < Month2007StartOrderDate) and (Month2006EndReceiptDate < Data1.iloc[PerfNum, 28]) and (Data1.iloc[PerfNum, 28] <= Month2007EndReceiptDate)):
-        Data1.iat[PerfNum, 48] = Data1.iloc[PerfNum, 7]
+    if ((Month2007StartOrderDate <= Data1.iloc[PerfNum,26]) and (Data1.iloc[PerfNum,26] <= Month2007EndOrderDate) and (Data1.iloc[PerfNum,29] <= Month2007EndReceiptDate)) or ((Data1.iloc[PerfNum,26] < Month2007StartOrderDate) and (Month2006EndReceiptDate < Data1.iloc[PerfNum,29]) and (Data1.iloc[PerfNum,29] <= Month2007EndReceiptDate)):
+        Data1.iat[PerfNum,49] = Data1.iloc[PerfNum,7]
     else:
-        Data1.iat[PerfNum, 48] = 0
+        Data1.iat[PerfNum,49] = 0
     PerfNum = PerfNum + 1
 
 # 8月
 PerfNum = 0
 while PerfNum < Data1RowNum:
-    if ((Month2008StartOrderDate <= Data1.iloc[PerfNum, 25]) and (Data1.iloc[PerfNum, 25] <= Month2008EndOrderDate) and (Data1.iloc[PerfNum, 28] <= Month2008EndReceiptDate)) or ((Data1.iloc[PerfNum, 25] < Month2008StartOrderDate) and (Month2007EndReceiptDate < Data1.iloc[PerfNum, 28]) and (Data1.iloc[PerfNum, 28] <= Month2008EndReceiptDate)):
-        Data1.iat[PerfNum, 49] = Data1.iloc[PerfNum, 7]
+    if ((Month2008StartOrderDate <= Data1.iloc[PerfNum,26]) and (Data1.iloc[PerfNum,26] <= Month2008EndOrderDate) and (Data1.iloc[PerfNum,29] <= Month2008EndReceiptDate)) or ((Data1.iloc[PerfNum,26] < Month2008StartOrderDate) and (Month2007EndReceiptDate < Data1.iloc[PerfNum,29]) and (Data1.iloc[PerfNum,29] <= Month2008EndReceiptDate)):
+        Data1.iat[PerfNum,50] = Data1.iloc[PerfNum,7]
     else:
-        Data1.iat[PerfNum, 49] = 0
+        Data1.iat[PerfNum,50] = 0
     PerfNum = PerfNum + 1
 
 # 9月
 PerfNum = 0
 while PerfNum < Data1RowNum:
-    if ((Month2009StartOrderDate <= Data1.iloc[PerfNum, 25]) and (Data1.iloc[PerfNum, 25] <= Month2009EndOrderDate) and (Data1.iloc[PerfNum, 28] <= Month2009EndReceiptDate)) or ((Data1.iloc[PerfNum, 25] < Month2009StartOrderDate) and (Month2008EndReceiptDate < Data1.iloc[PerfNum, 28]) and (Data1.iloc[PerfNum, 28] <= Month2009EndReceiptDate)):
-        Data1.iat[PerfNum, 50] = Data1.iloc[PerfNum, 7]
+    if ((Month2009StartOrderDate <= Data1.iloc[PerfNum,26]) and (Data1.iloc[PerfNum,26] <= Month2009EndOrderDate) and (Data1.iloc[PerfNum,29] <= Month2009EndReceiptDate)) or ((Data1.iloc[PerfNum,26] < Month2009StartOrderDate) and (Month2008EndReceiptDate < Data1.iloc[PerfNum,29]) and (Data1.iloc[PerfNum,29] <= Month2009EndReceiptDate)):
+        Data1.iat[PerfNum,51] = Data1.iloc[PerfNum,7]
     else:
-        Data1.iat[PerfNum, 50] = 0
+        Data1.iat[PerfNum,51] = 0
     PerfNum = PerfNum + 1
 
 # 10月
 PerfNum = 0
 while PerfNum < Data1RowNum:
-    if ((Month2010StartOrderDate <= Data1.iloc[PerfNum, 25]) and (Data1.iloc[PerfNum, 25] <= Month2010EndOrderDate) and (Data1.iloc[PerfNum, 28] <= Month2010EndReceiptDate)) or ((Data1.iloc[PerfNum, 25] < Month2010StartOrderDate) and (Month2009EndReceiptDate < Data1.iloc[PerfNum, 28]) and (Data1.iloc[PerfNum, 28] <= Month2010EndReceiptDate)):
-        Data1.iat[PerfNum, 51] = Data1.iloc[PerfNum, 7]
+    if ((Month2010StartOrderDate <= Data1.iloc[PerfNum,26]) and (Data1.iloc[PerfNum,26] <= Month2010EndOrderDate) and (Data1.iloc[PerfNum,29] <= Month2010EndReceiptDate)) or ((Data1.iloc[PerfNum,26] < Month2010StartOrderDate) and (Month2009EndReceiptDate < Data1.iloc[PerfNum,29]) and (Data1.iloc[PerfNum,29] <= Month2010EndReceiptDate)):
+        Data1.iat[PerfNum,52] = Data1.iloc[PerfNum,7]
     else:
-        Data1.iat[PerfNum, 51] = 0
+        Data1.iat[PerfNum,52] = 0
     PerfNum = PerfNum + 1
 
 # 11月
 PerfNum = 0
 while PerfNum < Data1RowNum:
-    if ((Month2011StartOrderDate <= Data1.iloc[PerfNum, 25]) and (Data1.iloc[PerfNum, 25] <= Month2011EndOrderDate) and (Data1.iloc[PerfNum, 28] <= Month2011EndReceiptDate)) or ((Data1.iloc[PerfNum, 25] < Month2011StartOrderDate) and (Month2010EndReceiptDate < Data1.iloc[PerfNum, 28]) and (Data1.iloc[PerfNum, 28] <= Month2011EndReceiptDate)):
-        Data1.iat[PerfNum, 52] = Data1.iloc[PerfNum, 7]
+    if ((Month2011StartOrderDate <= Data1.iloc[PerfNum,26]) and (Data1.iloc[PerfNum,26] <= Month2011EndOrderDate) and (Data1.iloc[PerfNum,29] <= Month2011EndReceiptDate)) or ((Data1.iloc[PerfNum,26] < Month2011StartOrderDate) and (Month2010EndReceiptDate < Data1.iloc[PerfNum,29]) and (Data1.iloc[PerfNum,29] <= Month2011EndReceiptDate)):
+        Data1.iat[PerfNum,53] = Data1.iloc[PerfNum,7]
     else:
-        Data1.iat[PerfNum, 52] = 0
+        Data1.iat[PerfNum,53] = 0
     PerfNum = PerfNum + 1
 
 # 12月
 PerfNum = 0
 while PerfNum < Data1RowNum:
-    if ((Month2012StartOrderDate <= Data1.iloc[PerfNum, 25]) and (Data1.iloc[PerfNum, 25] <= Month2012EndOrderDate) and (Data1.iloc[PerfNum, 28] <= Month2012EndReceiptDate)) or ((Data1.iloc[PerfNum, 25] < Month2012StartOrderDate) and (Month2011EndReceiptDate < Data1.iloc[PerfNum, 28]) and (Data1.iloc[PerfNum, 28] <= Month2012EndReceiptDate)):
-        Data1.iat[PerfNum, 53] = Data1.iloc[PerfNum, 7]
+    if ((Month2012StartOrderDate <= Data1.iloc[PerfNum,26]) and (Data1.iloc[PerfNum,26] <= Month2012EndOrderDate) and (Data1.iloc[PerfNum,29] <= Month2012EndReceiptDate)) or ((Data1.iloc[PerfNum,26] < Month2012StartOrderDate) and (Month2011EndReceiptDate < Data1.iloc[PerfNum,29]) and (Data1.iloc[PerfNum,29] <= Month2012EndReceiptDate)):
+        Data1.iat[PerfNum,54] = Data1.iloc[PerfNum,7]
     else:
-        Data1.iat[PerfNum, 53] = 0
+        Data1.iat[PerfNum,54] = 0
     PerfNum = PerfNum + 1
 
 #月度业绩汇总表
@@ -283,25 +283,25 @@ Data2RowNum = Data2Shape[0]
 #筛选2020业绩
 PerfNum = 0
 while PerfNum < Data2RowNum:
-    if (((Month2001StartOrderDate <= Data2.iloc[PerfNum, 25]) and (Data2.iloc[PerfNum, 25] <= Month2012EndOrderDate) and (Data2.iloc[PerfNum, 28] <= Month2012EndReceiptDate)) or ((Data2.iloc[PerfNum, 25] < Month2001StartOrderDate) and (Month1912EndReceiptDate < Data2.iloc[PerfNum, 28]) and (Data2.iloc[PerfNum, 28] <= Month2012EndReceiptDate))):
-        Data2.iat[PerfNum, 44] = 1
+    if (((Month2001StartOrderDate <= Data2.iloc[PerfNum,26]) and (Data2.iloc[PerfNum,26] <= Month2012EndOrderDate) and (Data2.iloc[PerfNum,29] <= Month2012EndReceiptDate)) or ((Data2.iloc[PerfNum,26] < Month2001StartOrderDate) and (Month1912EndReceiptDate < Data2.iloc[PerfNum,29]) and (Data2.iloc[PerfNum,29] <= Month2012EndReceiptDate))):
+        Data2.iat[PerfNum,45] = 1
     else:
-        Data2.iat[PerfNum, 44] = 0
-    if ((Data2.iloc[PerfNum, 29] == '等待回执') or (Data2.iloc[PerfNum, 29] == '投保单')):
-        Data2.iat[PerfNum, 44] = 1
+        Data2.iat[PerfNum,45] = 0
+    if ((Data2.iloc[PerfNum,30] == '等待回执') or (Data2.iloc[PerfNum,30] == '投保单')):
+        Data2.iat[PerfNum,45] = 1
     PerfNum = PerfNum + 1
 
 #计算折算保费
 PerfNum = 0
 while PerfNum < Data2RowNum:
-    if Data2.iloc[PerfNum, 44] == 1:
-        Data2.iat[PerfNum, 42] = Data2.iloc[PerfNum, 1]
-        Data2.iat[PerfNum, 43] = Data2.iloc[PerfNum, 6]
+    if Data2.iloc[PerfNum,45] == 1:
+        Data2.iat[PerfNum,43] = Data2.iloc[PerfNum,1]
+        Data2.iat[PerfNum,44] = Data2.iloc[PerfNum,6]
     else:
-        Data2.iat[PerfNum, 42] = 0
-        Data2.iat[PerfNum, 43] = 0
-    if (Data2.iloc[PerfNum, 44] == 1 and (Data2.iloc[PerfNum, 38] == '普通个寿')) and (Data2.iloc[PerfNum, 14] == '1年'):
-        Data2.iat[PerfNum, 42] = 0.06 * Data2.iloc[PerfNum, 1]
+        Data2.iat[PerfNum,43] = 0
+        Data2.iat[PerfNum,44] = 0
+    if (Data2.iloc[PerfNum,45] == 1 and (Data2.iloc[PerfNum,39] == '普通个寿')) and (Data2.iloc[PerfNum,15] == '1年'):
+        Data2.iat[PerfNum,43] = 0.06 * Data2.iloc[PerfNum,1]
     PerfNum = PerfNum + 1
 
 #MDRT数据汇总
