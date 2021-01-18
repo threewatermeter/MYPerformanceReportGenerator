@@ -322,12 +322,12 @@ COTPremium20 = 3 * MDRTPremium20
 TOTCommission20 = 6 * MDRTCommission20
 TOTPremium20 = 6 * MDRTPremium20
 
-MDRTCommission20 = 183100
-MDRTPremium20 = 549300
-COTCommission20 = 3 * MDRTCommission20
-COTPremium20 = 3 * MDRTPremium20
-TOTCommission20 = 6 * MDRTCommission20
-TOTPremium20 = 6 * MDRTPremium20
+MDRTCommission21 = 183100
+MDRTPremium21 = 549300
+COTCommission21 = 3 * MDRTCommission20
+COTPremium21 = 3 * MDRTPremium20
+TOTCommission21 = 6 * MDRTCommission20
+TOTPremium21 = 6 * MDRTPremium20
 
 
 PerfNum = 0
